@@ -1,0 +1,45 @@
+# Função para somar dois números
+def somar(a, b):
+    return a + b
+
+# Função para encontrar o maior número em uma lista
+def maior_numero(lista):
+    if len(lista) == 0:
+        return None
+    maior = lista[0]
+    for num in lista:
+        if num > maior:
+            maior = num
+    return maior
+
+# Função para inverter uma string
+def inverter_string(string):
+    return string[::-1]
+
+# Função para calcular o fatorial de um número
+def fatorial(n):
+    if n < 0:
+        return None  # Fatorial não é definido para números negativos
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        resultado = 1
+        for i in range(2, n + 1):
+            resultado *= i
+        return resultado
+
+# Função para verificar se um número é primo
+def eh_primo(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Exemplos de uso das funções
+print("Soma de 3 e 5:", somar(3, 5))
+print("Maior número na lista [3, 8, 1, 9, 2]:", maior_numero([3, 8, 1, 9, 2]))
+print("String invertida de 'Python':", inverter_string("Python"))
+print("Fatorial de 5:", fatorial(5))
+print("7 é primo?", eh_primo(7))
